@@ -9,8 +9,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(content: params[:content])
-    redirect_to action: :index 
+    render json:{ post: post}
   end
-
-
+#レスポンスで返却されるデータフォーマットをjsonに設定
 end
