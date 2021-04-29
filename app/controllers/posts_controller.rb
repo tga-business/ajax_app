@@ -8,8 +8,8 @@ class PostsController < ApplicationController
   #end
 
   def create
-    Post.create(content: params[:content])
-    render json:{ post: post}
+    post = Post.create(content: params[:content])
+    render json:{ post: post }
   end
 #レスポンスで返却されるデータフォーマットをjsonに設定
 end
